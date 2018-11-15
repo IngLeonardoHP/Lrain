@@ -49,18 +49,18 @@
 }
 @-webkit-keyframes leaf{
     from {top: -10px;}
-    to {top: 100%;}
+    to {top: 110%;}
  }
 @keyframes rotate-ani {
     0% { 
         transform: rotate(-180deg) translate(0px, 0px); 
     }
     90% { 
-        transform: rotate(180deg) translate(0px, 35px);
+        transform: rotate(180deg) translate(10px, 75px);
         opacity: 1;
     }
     100%{
-        transform: rotate(180deg) translate(10px, 55px);
+        transform: rotate(180deg) translate(20px, 95px);
         opacity: 0;
     }
 }
