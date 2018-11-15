@@ -40,33 +40,27 @@
 .icon-leaf, .icon-leaf-one, .icon-leaf-two{
     position: absolute;
     top: 0px;
-    left: 0;
+    left: 600px;
     color:#2d572c;
-    animation-name: rotate-ani, fall;
-    animation-duration: 2s, 5s;
-    animation-timing-function: linear, linear;
-    animation-iteration-count:infinite;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-    display: inline-block;
+    animation-name: leaf, rotate-ani;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-timing-function: linear;
 }
+@-webkit-keyframes leaf{
+    from {top: -10px;}
+    to {top: 100%;}
+ }
 @keyframes rotate-ani {
-    0% { transform: rotate(180deg); }
-  25% { transform: rotate(280deg); }
-  50% { transform: rotate(40deg); }
-  100% { transform: rotate(180deg); }
+    0% { 
+        transform: rotate(-180deg) translate(0px, 0px); 
+    }
+    90% { 
+        transform: rotate(180deg) translate(0px, 35px);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(180deg) translate(10px, 55px);
+        opacity: 0;
+    }
 }
-
-/* @keyframes fall {
-    0% {
-        top: 0px;
-        transform: translateX(left);
-    }
-    100% {
-        top: 100%;
-        transform: translateX(250px);
-    }
-} */
