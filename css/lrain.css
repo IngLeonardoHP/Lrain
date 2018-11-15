@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?ila2cz');
+    src:  url('fonts/icomoon.eot?ila2cz#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?ila2cz') format('truetype'),
+        url('fonts/icomoon.woff?ila2cz') format('woff'),
+        url('fonts/icomoon.svg?ila2cz#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-raindrop:before {
+    content: "\e901";
+}
+.icon-leaf:before {
+    content: "\e902";
+}
+.icon-snowflake-o:before {
+    content: "\e903";
+}
+.icon-leaf-one:before {
+    content: "\e900";
+}
+.icon-leaf-two:before {
+    content: "\e9a4";
+}
+
+.icon-leaf, .icon-leaf-one, .icon-leaf-two{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    color:#2d572c;
+    animation-name: rotate-ani, fall;
+    animation-duration: 2s, 5s;
+    animation-timing-function: linear, linear;
+    animation-iteration-count:infinite;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    display: inline-block;
+}
+@keyframes rotate-ani {
+    0% { transform: rotate(180deg); }
+  25% { transform: rotate(280deg); }
+  50% { transform: rotate(40deg); }
+  100% { transform: rotate(180deg); }
+}
+
+/* @keyframes fall {
+    0% {
+        top: 0px;
+        transform: translateX(left);
+    }
+    100% {
+        top: 100%;
+        transform: translateX(250px);
+    }
+} */
