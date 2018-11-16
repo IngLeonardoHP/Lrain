@@ -36,26 +36,30 @@
 .icon-leaf-two:before {
     content: "\e9a4";
 }
-
-.icon-leaf, .icon-leaf-one, .icon-leaf-two{
+.lrain.icon-leaf, .lrain.icon-leaf-one, .lrain.icon-leaf-two{
     position: absolute;
     top: 0px;
-    left: 600px;
     color:#2d572c;
     animation-name: leaf, rotate-ani;
     animation-iteration-count: infinite;
     animation-duration: 6s;
     animation-timing-function: linear;
 }
+.left-100{
+    left: 100px;
+}
+.left-200{
+    left: 200px;
+}
 @-webkit-keyframes leaf{
     from {top: -10px;}
     to {top: 110%;}
- }
+}
 @keyframes rotate-ani {
-    0% { 
+    0%{
         transform: rotate(-180deg) translate(0px, 0px); 
     }
-    90% { 
+    90%{
         transform: rotate(180deg) translate(10px, 75px);
         opacity: 1;
     }
