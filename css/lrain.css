@@ -36,6 +36,13 @@
 .icon-leaf-two:before {
     content: "\e9a4";
 }
+.left-100{
+    left: 100px;
+}
+.left-200{
+    left: 200px;
+}
+/* hojas */
 .lrain.icon-leaf, .lrain.icon-leaf-one, .lrain.icon-leaf-two{
     position: absolute;
     top: 0px;
@@ -44,12 +51,6 @@
     animation-iteration-count: infinite;
     animation-duration: 6s;
     animation-timing-function: linear;
-}
-.left-100{
-    left: 100px;
-}
-.left-200{
-    left: 200px;
 }
 @-webkit-keyframes leaf{
     from {top: -10px;}
@@ -65,6 +66,53 @@
     }
     100%{
         transform: rotate(180deg) translate(20px, 95px);
+        opacity: 0;
+    }
+}
+/* Gotas */
+.lrain.icon-raindrop{
+    position: absolute;
+    top: 0px;
+    color:#2a2ef0;
+    animation-name: rain;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@-webkit-keyframes rain{
+    0% {
+        top: -10px;
+        transform: rotate(-20deg) translate(0px, 0px); 
+    }
+    90%{
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        transform: rotate(-20deg) translate(200px, 0px); 
+        opacity: 0;
+    }
+}
+/* Nieve */
+.lrain.icon-snowflake-o{
+    position: absolute;
+    top: 0px;
+    text-shadow:2px 2px 8px #ccc;
+    color:rgb(255, 255, 255);
+    animation-name: leaf, snow;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+@keyframes snow {
+    0%{
+        transform: rotate(-180deg) translate(0px, 0px); 
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(180deg) translate(100px, 75px);
         opacity: 0;
     }
 }
