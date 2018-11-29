@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?ila2cz');
+    src:  url('fonts/icomoon.eot?ila2cz#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?ila2cz') format('truetype'),
+        url('fonts/icomoon.woff?ila2cz') format('woff'),
+        url('fonts/icomoon.svg?ila2cz#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-raindrop:before {
+    content: "\e901";
+}
+.icon-leaf:before {
+    content: "\e902";
+}
+.icon-snowflake-o:before {
+    content: "\e903";
+}
+.icon-leaf-one:before {
+    content: "\e900";
+}
+.icon-leaf-two:before {
+    content: "\e9a4";
+}
+.left-100{
+    left: 100px;
+}
+.left-200{
+    left: 200px;
+}
+/* hojas */
+.lrain.icon-leaf, .lrain.icon-leaf-one, .lrain.icon-leaf-two{
+    position: absolute;
+    top: 0px;
+    color:#2d572c;
+    animation-name: leaf, rotate-ani;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+}
+@-webkit-keyframes leaf{
+    from {top: -10px;}
+    to {top: 110%;}
+}
+@keyframes rotate-ani {
+    0%{
+        transform: rotate(-180deg) translate(0px, 0px); 
+    }
+    90%{
+        transform: rotate(180deg) translate(10px, 75px);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(180deg) translate(20px, 95px);
+        opacity: 0;
+    }
+}
+/* Gotas */
+.lrain.icon-raindrop{
+    position: absolute;
+    top: 0px;
+    color:#2a2ef0;
+    animation-name: rain;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+@-webkit-keyframes rain{
+    0% {
+        top: -10px;
+        transform: rotate(-20deg) translate(0px, 0px); 
+    }
+    90%{
+        opacity: 1;
+    }
+    100% {
+        top: 100%;
+        transform: rotate(-20deg) translate(200px, 0px); 
+        opacity: 0;
+    }
+}
+/* Nieve */
+.lrain.icon-snowflake-o{
+    position: absolute;
+    top: 0px;
+    text-shadow:2px 2px 8px #ccc;
+    color:rgb(255, 255, 255);
+    animation-name: leaf, snow;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}
+@keyframes snow {
+    0%{
+        transform: rotate(-180deg) translate(0px, 0px); 
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(180deg) translate(100px, 75px);
+        opacity: 0;
+    }
+}
