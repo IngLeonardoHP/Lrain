@@ -13,7 +13,7 @@
    //params: type rain / tipo de luvia
    //        nummber drops  / cantidad de gotas sobre la pantalla
    
-function generateLrain(type, count) {
+function generateLrain(type, count, timeout = 0) {
     for(var i = 0; i < count; i++){
         var timeInterval = Math.floor((Math.random() * 6000) + 100);
         setTimeout(function(){
@@ -35,6 +35,12 @@ function generateLrain(type, count) {
         
             document.getElementsByTagName('body')[0].appendChild(hn); 
         
+            if(timeout!=0){
+                setTimeout(function(){
+                    hn.className += "hide";
+                },timeout)
+            }
+
         },
         timeInterval);
     }
